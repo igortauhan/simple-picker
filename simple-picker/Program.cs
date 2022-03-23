@@ -1,4 +1,5 @@
 using simple_picker.Services.PixelColor;
+using simple_picker.Utils;
 
 namespace simple_picker
 {
@@ -13,7 +14,7 @@ namespace simple_picker
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm(new PixelColorService()));
+            Application.Run(new MainForm(new PixelColorService(), new ColorValueFormatter()));
         }
     }
 }

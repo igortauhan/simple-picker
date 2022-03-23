@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pickButton = new System.Windows.Forms.Button();
-            this.hexLabel = new System.Windows.Forms.Label();
-            this.hexLabelText = new System.Windows.Forms.Label();
+            this.valuesLabel = new System.Windows.Forms.Label();
+            this.rgbLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pickButton
@@ -46,31 +46,31 @@
             this.pickButton.UseVisualStyleBackColor = true;
             this.pickButton.Click += new System.EventHandler(this.pickButton_Click);
             // 
-            // hexLabel
+            // valuesLabel
             // 
-            this.hexLabel.AutoSize = true;
-            this.hexLabel.Location = new System.Drawing.Point(28, 105);
-            this.hexLabel.Name = "hexLabel";
-            this.hexLabel.Size = new System.Drawing.Size(63, 15);
-            this.hexLabel.TabIndex = 1;
-            this.hexLabel.Text = "Hex Color:";
+            this.valuesLabel.AutoSize = true;
+            this.valuesLabel.Location = new System.Drawing.Point(12, 9);
+            this.valuesLabel.Name = "valuesLabel";
+            this.valuesLabel.Size = new System.Drawing.Size(40, 15);
+            this.valuesLabel.TabIndex = 2;
+            this.valuesLabel.Text = "Values";
             // 
-            // hexLabelText
+            // rgbLabel
             // 
-            this.hexLabelText.AutoSize = true;
-            this.hexLabelText.Location = new System.Drawing.Point(97, 105);
-            this.hexLabelText.Name = "hexLabelText";
-            this.hexLabelText.Size = new System.Drawing.Size(56, 15);
-            this.hexLabelText.TabIndex = 2;
-            this.hexLabelText.Text = "#######";
+            this.rgbLabel.AutoSize = true;
+            this.rgbLabel.Location = new System.Drawing.Point(112, 72);
+            this.rgbLabel.Name = "rgbLabel";
+            this.rgbLabel.Size = new System.Drawing.Size(10, 15);
+            this.rgbLabel.TabIndex = 3;
+            this.rgbLabel.Text = " ";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.hexLabelText);
-            this.Controls.Add(this.hexLabel);
+            this.Controls.Add(this.rgbLabel);
+            this.Controls.Add(this.valuesLabel);
             this.Controls.Add(this.pickButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -86,7 +86,7 @@
         #endregion
 
         private Button pickButton;
-        private Label hexLabel;
-        private Label hexLabelText;
+        private Label valuesLabel;
+        private Label rgbLabel;
     }
 }
