@@ -26,6 +26,7 @@ namespace simple_picker.Services.Keyboard
         private static void UpdateValues()
         {
             _mainForm.rgbTextBox.Text = _valuesService.ValueRgb();
+            _mainForm.argbTextBox.Text = _valuesService.ValueArgb();
             _mainForm.hexTextBox.Text = _valuesService.ValueHex();
         }
 

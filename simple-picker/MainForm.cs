@@ -7,6 +7,7 @@ namespace simple_picker
 {
     public partial class MainForm : Form
     {
+        private const string projectSource = "https://github.com/igortauhan/simple-picker";
         private KeyboardHookService _keyboardHookService;
 
         public MainForm()
@@ -21,6 +22,10 @@ namespace simple_picker
         private void rgbButtonCpy_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(rgbTextBox.Text);
+        }
+        private void argbButtonCpy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(argbTextBox.Text);
         }
 
         private void hexButtonCpy_Click(object sender, EventArgs e)

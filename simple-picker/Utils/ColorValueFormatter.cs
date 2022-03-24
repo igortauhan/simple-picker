@@ -13,6 +13,11 @@ namespace simple_picker.Utils
             return $"{color.R}, {color.G}, {color.B}";
         }
 
+        public string FormatToArgb(Color color)
+        {
+            return $"255, {color.R}, {color.G}, {color.B}";
+        }
+
         public string FormatToHex(Color color)
         {
             string r = ConvertToHex(color.R);
