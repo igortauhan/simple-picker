@@ -110,8 +110,8 @@
 
         private Label valuesLabel;
         private Label rgbLabel;
-        private TextBox rgbTextBox;
+        public TextBox rgbTextBox;
         private Label hexLabel;
-        private TextBox hexTextBox;
+        public TextBox hexTextBox;
     }
 }

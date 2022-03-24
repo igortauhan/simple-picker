@@ -1,19 +1,21 @@
-using simple_picker.Services.Mouse;
+using simple_picker.Services.Keyboard;
 using simple_picker.Services.PixelColor;
+using simple_picker.Services.Values;
 using simple_picker.Utils;
 
 namespace simple_picker
 {
     public partial class MainForm : Form
     {
-        private readonly IPixelColorService _pixelColorService;
-        private readonly IColorValueFormatter _formatter;
+        private KeyboardHookService _keyboardHookService;
 
-        public MainForm(IPixelColorService pixelColorService, IColorValueFormatter colorValueFormatter)
+        public MainForm()
         {
             InitializeComponent();
-            _pixelColorService = pixelColorService;
-            _formatter = colorValueFormatter;
+            _keyboardHookService = new KeyboardHookService(
+                    this, 
+                    new ValuesService(new PixelColorService(), new ColorValueFormatter())
+                );
         }
     }
 }
