@@ -60,10 +60,10 @@
             // rgbTextBox
             // 
             this.rgbTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rgbTextBox.Location = new System.Drawing.Point(79, 69);
+            this.rgbTextBox.Location = new System.Drawing.Point(54, 69);
             this.rgbTextBox.Name = "rgbTextBox";
             this.rgbTextBox.ReadOnly = true;
-            this.rgbTextBox.Size = new System.Drawing.Size(142, 29);
+            this.rgbTextBox.Size = new System.Drawing.Size(187, 29);
             this.rgbTextBox.TabIndex = 2;
             // 
             // hexLabel
@@ -79,10 +79,10 @@
             // hexTextBox
             // 
             this.hexTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.hexTextBox.Location = new System.Drawing.Point(79, 122);
+            this.hexTextBox.Location = new System.Drawing.Point(54, 122);
             this.hexTextBox.Name = "hexTextBox";
             this.hexTextBox.ReadOnly = true;
-            this.hexTextBox.Size = new System.Drawing.Size(142, 29);
+            this.hexTextBox.Size = new System.Drawing.Size(187, 29);
             this.hexTextBox.TabIndex = 4;
             // 
             // MainForm
