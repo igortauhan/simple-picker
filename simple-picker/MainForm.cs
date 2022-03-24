@@ -20,7 +20,7 @@ namespace simple_picker
         {
             Point mouse = MouseService.GetMousePosition();
             Color color = _pixelColorService.GetPixelColor(mouse.X, mouse.Y);
-            rgbLabel.Text = _formatter.FormatToRgb(color);
+            rgbLabel.Text = _formatter.FormatToHex(color);
         }
     }
 }
