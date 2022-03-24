@@ -15,11 +15,5 @@ namespace simple_picker
             _pixelColorService = pixelColorService;
             _formatter = colorValueFormatter;
         }
-
-        private void pickButton_Click(object sender, EventArgs e)
-        {
-            Point mouse = MouseService.GetMousePosition();
-            Color color = _pixelColorService.GetPixelColor(mouse.X, mouse.Y);
-        }
     }
 }
