@@ -28,6 +28,11 @@ namespace simple_picker.Utils
 
         private string ConvertToHex(int value)
         {
+            if (value == 0)
+            {
+                return "00";
+            }
+
             return value.ToString("X");
         }
     }

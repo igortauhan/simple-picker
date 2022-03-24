@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.valuesLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.rgbLabel = new System.Windows.Forms.Label();
             this.rgbTextBox = new System.Windows.Forms.TextBox();
             this.hexLabel = new System.Windows.Forms.Label();
@@ -41,16 +41,16 @@
             this.argbButtonCpy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // valuesLabel
+            // titleLabel
             // 
-            this.valuesLabel.AutoSize = true;
-            this.valuesLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.valuesLabel.Location = new System.Drawing.Point(12, 25);
-            this.valuesLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.valuesLabel.Name = "valuesLabel";
-            this.valuesLabel.Size = new System.Drawing.Size(55, 21);
-            this.valuesLabel.TabIndex = 0;
-            this.valuesLabel.Text = "Values";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titleLabel.Location = new System.Drawing.Point(61, 18);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(178, 25);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Simple Color Picker";
             // 
             // rgbLabel
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.hexLabel);
             this.Controls.Add(this.rgbTextBox);
             this.Controls.Add(this.rgbLabel);
-            this.Controls.Add(this.valuesLabel);
+            this.Controls.Add(this.titleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -166,7 +166,7 @@
 
         #endregion
 
-        private Label valuesLabel;
+        private Label titleLabel;
         private Label rgbLabel;
         public TextBox rgbTextBox;
         private Label hexLabel;
