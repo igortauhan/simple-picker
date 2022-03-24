@@ -34,6 +34,8 @@
             this.rgbTextBox = new System.Windows.Forms.TextBox();
             this.hexLabel = new System.Windows.Forms.Label();
             this.hexTextBox = new System.Windows.Forms.TextBox();
+            this.rgbButtonCpy = new System.Windows.Forms.Button();
+            this.hexButtonCpy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // valuesLabel
@@ -63,7 +65,7 @@
             this.rgbTextBox.Location = new System.Drawing.Point(54, 69);
             this.rgbTextBox.Name = "rgbTextBox";
             this.rgbTextBox.ReadOnly = true;
-            this.rgbTextBox.Size = new System.Drawing.Size(187, 29);
+            this.rgbTextBox.Size = new System.Drawing.Size(157, 29);
             this.rgbTextBox.TabIndex = 2;
             // 
             // hexLabel
@@ -82,14 +84,36 @@
             this.hexTextBox.Location = new System.Drawing.Point(54, 122);
             this.hexTextBox.Name = "hexTextBox";
             this.hexTextBox.ReadOnly = true;
-            this.hexTextBox.Size = new System.Drawing.Size(187, 29);
+            this.hexTextBox.Size = new System.Drawing.Size(157, 29);
             this.hexTextBox.TabIndex = 4;
+            // 
+            // rgbButtonCpy
+            // 
+            this.rgbButtonCpy.Location = new System.Drawing.Point(217, 69);
+            this.rgbButtonCpy.Name = "rgbButtonCpy";
+            this.rgbButtonCpy.Size = new System.Drawing.Size(55, 29);
+            this.rgbButtonCpy.TabIndex = 5;
+            this.rgbButtonCpy.Text = "Copy";
+            this.rgbButtonCpy.UseVisualStyleBackColor = true;
+            this.rgbButtonCpy.Click += new System.EventHandler(this.rgbButtonCpy_Click);
+            // 
+            // hexButtonCpy
+            // 
+            this.hexButtonCpy.Location = new System.Drawing.Point(217, 122);
+            this.hexButtonCpy.Name = "hexButtonCpy";
+            this.hexButtonCpy.Size = new System.Drawing.Size(55, 29);
+            this.hexButtonCpy.TabIndex = 6;
+            this.hexButtonCpy.Text = "Copy";
+            this.hexButtonCpy.UseVisualStyleBackColor = true;
+            this.hexButtonCpy.Click += new System.EventHandler(this.hexButtonCpy_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.hexButtonCpy);
+            this.Controls.Add(this.rgbButtonCpy);
             this.Controls.Add(this.hexTextBox);
             this.Controls.Add(this.hexLabel);
             this.Controls.Add(this.rgbTextBox);
@@ -113,5 +137,7 @@
         public TextBox rgbTextBox;
         private Label hexLabel;
         public TextBox hexTextBox;
+        private Button rgbButtonCpy;
+        private Button hexButtonCpy;
     }
 }

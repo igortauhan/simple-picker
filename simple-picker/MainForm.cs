@@ -17,5 +17,15 @@ namespace simple_picker
                     new ValuesService(new PixelColorService(), new ColorValueFormatter())
                 );
         }
+
+        private void rgbButtonCpy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(rgbTextBox.Text);
+        }
+
+        private void hexButtonCpy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(hexTextBox.Text);
+        }
     }
 }
