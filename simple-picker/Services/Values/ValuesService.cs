@@ -20,6 +20,13 @@ namespace simple_picker.Services.Values
             Color color = GetColor();
             return _colorValueFormatter.FormatToRgb(color);
         }
+
+        public string ValueArgb()
+        {
+            Color color = GetColor();
+            return _colorValueFormatter.FormatToArgb(color);
+        }
+
         public string ValueHex()
         {
             Color color = GetColor();

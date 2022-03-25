@@ -2,11 +2,13 @@ using simple_picker.Services.Keyboard;
 using simple_picker.Services.PixelColor;
 using simple_picker.Services.Values;
 using simple_picker.Utils;
+using System.Diagnostics;
 
 namespace simple_picker
 {
     public partial class MainForm : Form
     {
+        private const string ProjectSource = "https://github.com/igortauhan/simple-picker";
         private KeyboardHookService _keyboardHookService;
 
         public MainForm()
@@ -16,6 +18,20 @@ namespace simple_picker
                     this, 
                     new ValuesService(new PixelColorService(), new ColorValueFormatter())
                 );
+        }
+
+        private void rgbButtonCpy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(rgbTextBox.Text);
+        }
+        private void argbButtonCpy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(argbTextBox.Text);
+        }
+
+        private void hexButtonCpy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(hexTextBox.Text);
         }
     }
 }

@@ -23,9 +23,15 @@ namespace simple_picker.Services.Keyboard
             _valuesService = valuesService;
         }
 
+        ~KeyboardHookService()
+        {
+            UnhookWindowsHookEx(_hookID);
+        }
+
         private static void UpdateValues()
         {
             _mainForm.rgbTextBox.Text = _valuesService.ValueRgb();
+            _mainForm.argbTextBox.Text = _valuesService.ValueArgb();
             _mainForm.hexTextBox.Text = _valuesService.ValueHex();
         }
 
@@ -46,15 +52,10 @@ namespace simple_picker.Services.Keyboard
             {
                 int vkCode = Marshal.ReadInt32(lParam);
 
-                if (vkCode == 33)
+                if (vkCode == 20)
                 {
                     UpdateValues();
-                }
-
-                if (vkCode == 34)
-                {
-                    UnhookWindowsHookEx(_hookID);
-                    Application.Exit();
+                    return (IntPtr) 1;
                 }
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);

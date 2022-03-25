@@ -10,7 +10,12 @@ namespace simple_picker.Utils
     {
         public string FormatToRgb(Color color)
         {
-            return $"RGB: {color.R}, {color.G}, {color.B}";
+            return $"{color.R}, {color.G}, {color.B}";
+        }
+
+        public string FormatToArgb(Color color)
+        {
+            return $"255, {color.R}, {color.G}, {color.B}";
         }
 
         public string FormatToHex(Color color)
@@ -18,12 +23,18 @@ namespace simple_picker.Utils
             string r = ConvertToHex(color.R);
             string g = ConvertToHex(color.G);
             string b = ConvertToHex(color.B);
-            return $"HEX: {r}{g}{b}";
+            return $"#{r}{g}{b}";
         }
 
         private string ConvertToHex(int value)
         {
-            return value.ToString("X");
+            string formattedValue = value.ToString("X");
+            if (formattedValue.Length < 2)
+            {
+                formattedValue += "0";
+            }
+
+            return formattedValue;
         }
     }
 }
