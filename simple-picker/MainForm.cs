@@ -2,12 +2,13 @@ using simple_picker.Services.Keyboard;
 using simple_picker.Services.PixelColor;
 using simple_picker.Services.Values;
 using simple_picker.Utils;
+using System.Diagnostics;
 
 namespace simple_picker
 {
     public partial class MainForm : Form
     {
-        private const string projectSource = "https://github.com/igortauhan/simple-picker";
+        private const string ProjectSource = "https://github.com/igortauhan/simple-picker";
         private KeyboardHookService _keyboardHookService;
 
         public MainForm()

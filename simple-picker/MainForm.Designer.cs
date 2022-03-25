@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 261);
+            this.ClientSize = new System.Drawing.Size(304, 226);
             this.Controls.Add(this.argbButtonCpy);
             this.Controls.Add(this.argbTextBox);
             this.Controls.Add(this.argbLabel);
